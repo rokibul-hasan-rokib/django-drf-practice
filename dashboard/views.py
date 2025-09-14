@@ -14,7 +14,6 @@ def superadmin_dashboard(request):
     total_products = Product.objects.count()
     total_orders = Order.objects.count()
     total_sales = sum(order.total_amount for order in Order.objects.all())
-
     context = {
         "total_vendors": total_vendors,
         "total_products": total_products,
